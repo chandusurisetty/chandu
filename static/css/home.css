@@ -302,7 +302,7 @@ a {
 
 
 .container3 {
-    height: 50vh;
+    margin-bottom: 2rem;
     text-align: center;
 
 }
@@ -440,6 +440,15 @@ a {
         width: 80%;
     }
 
+    .col1,
+    .col2 {
+        width: 100%;
+    }
+
+    .projimg {
+        width: auto;
+    }
+
     .mailbar a {
         width: max-content;
     }
@@ -479,6 +488,12 @@ a {
         height: max-content;
     }
 
+    .skillbar h1,
+    .col1 h1,
+    .phone_view h1,
+    .mailbar h1 {
+        font-size: 1.5rem;
+    }
 
 
     .abouttext {
@@ -499,5 +514,16 @@ a {
 
     .myname {
         line-height: 1;
+    }
+}
+
+@media (max-width:550px) {
+
+    .mailbar p {
+        font-size: 12px;
+    }
+
+    .cpyterms p {
+        font-size: .7rem;
     }
 }
