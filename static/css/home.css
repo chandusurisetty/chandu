@@ -4,9 +4,7 @@
 * {
     font-family: 'Orbitron', sans-serif;
     box-sizing: border-box;
-    color: #edede9;
     letter-spacing: 2px;
-
 }
 
 body {
@@ -57,6 +55,7 @@ body {
 .name h2,
 .footlogo h2 {
     font-family: 'Comforter Brush', cursive;
+    color: #edede9;
 
 }
 
@@ -89,6 +88,7 @@ body {
 .abouttext {
     width: 40%;
     margin: auto 0;
+
 }
 
 .abouttext h4 {
@@ -96,14 +96,19 @@ body {
     margin: 0;
 }
 
+.abouttext a {
+    color: #edede9;
+}
+
+
 .iamchandu {
     font-size: 40px;
-}
-
-.iamchandu span {
     color: #a2d2ff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: .8em;
+    outline: none;
+    animation: blinkanimation 3s linear infinite;
 }
-
 
 
 
@@ -180,12 +185,16 @@ body {
 
 .skillcol h1 {
     font-size: 2rem;
-
+    color: #edede9;
 }
 
 .brefe {
     width: 600px;
     margin: auto;
+}
+
+.imglink {
+    color: #edede9;
 }
 
 .brefe p {
@@ -212,7 +221,7 @@ body {
 
 .RecentProj {
     text-align: start;
-
+    color: #edede9;
 }
 
 .allProj {
@@ -343,65 +352,56 @@ a {
     width: 50%;
 }
 
+.mailbar strong {
+    color: #edede9;
+}
+
 .footlogo {
     display: flex;
     justify-content: space-around;
 }
 
-.cpyterms p,
-.cpyterms a {
+.cpyterms p {
     margin: 1.5rem 0;
     font-family: 'Comfortaa', cursive;
     font-size: .8rem;
+    color: #edede9;
 }
 
-.cpyterms a {
-    text-decoration: none;
-}
 
-@keyframes image_move {
-    0% {
-        transform: translateX(100%);
+
+@keyframes blinkanimation {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #063742;
+        text-shadow: none;
     }
 
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
     100% {
-        transform: translateX(0);
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
     }
-}
-
-@keyframes say-hai {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes about {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
-}
-
-@keyframes --project-move {
-    0% {
-        transform: translateX(100px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-
 }
 
 @media (max-width:1200px) {
