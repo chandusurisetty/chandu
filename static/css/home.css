@@ -502,7 +502,7 @@ a {
     }
     .footlogo{
          flex-direction: column;
-        align-item:center;
+        align-items:center;
     }
 
 }
