@@ -500,6 +500,10 @@ a {
         margin: 5%;
         width: 95%;
     }
+    .footlogo{
+         flex-direction: column;
+        align-item:center;
+    }
 
 }
 
