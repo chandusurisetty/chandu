@@ -444,44 +444,8 @@ a {
     }
 }
 
-.welcome-display {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-.welcome-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-}
 
-.welcome-content h1 {
-    margin: 10px 0;
-    font-size: 2rem;
-    color: #333;
-}
-
-.welcome-content p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.welcome-logo {
-    width: 150px;
-    /* Increase the width */
-    height: auto;
-    margin-bottom: 20px;
-}
 
 .close-btn {
     position: absolute;
