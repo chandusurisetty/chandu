@@ -36,11 +36,11 @@ const Hero = () => {
                 <div className="imgbar">
                     <img data-aos="fade-left" src={cImg} alt="chandusurisetty" />
 
-                    <div className="comic-cloud cloud-5">Web Developer</div>
+                    <div className="comic-cloud cloud-4">Web Developer</div>
                     <div className="comic-cloud cloud-2">App Developer</div>
                     <div className="comic-cloud cloud-1">AI Developer</div>
                     <div className="comic-cloud cloud-3">Hardware Validation Engineer</div>
-                    <div className="comic-cloud cloud-4">Embedded Dev</div>
+                    {/* <div className="comic-cloud cloud-4">Embedded Dev</div> */}
 
 
                 </div>
