@@ -39,7 +39,7 @@ const Hero = () => {
                     <div className="comic-cloud cloud-4">Web Developer</div>
                     <div className="comic-cloud cloud-2">App Developer</div>
                     <div className="comic-cloud cloud-1">AI Developer</div>
-                    <div className="comic-cloud cloud-3">Hardware Validation Engineer</div>
+                    <div className="comic-cloud cloud-3">Hardware Engineer</div>
                     {/* <div className="comic-cloud cloud-4">Embedded Dev</div> */}
 
 
