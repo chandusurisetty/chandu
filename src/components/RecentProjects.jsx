@@ -24,7 +24,7 @@ const RecentProjects = () => {
                             <p>PyCom</p>
                         </div>
                     </a>
-                    <a target="_blank" rel="noreferrer" className="imglink" href="https://chandusurisetty.github.io/UnChat/">
+                    <a target="_blank" rel="noreferrer" className="imglink" href="https://unchat.chandusurisetty.in/">
                         <div data-aos="zoom-in" className="projimg ping3">
                             <p>UnChat</p>
                         </div>
