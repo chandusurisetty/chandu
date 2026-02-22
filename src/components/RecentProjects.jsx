@@ -29,9 +29,6 @@ const RecentProjects = () => {
                             <p>UnChat</p>
                         </div>
                     </a>
-                    <div className="phone_view">
-                        <h1><Link className="allProj" to="/projects">More <strong>+</strong></Link></h1>
-                    </div>
                 </div>
             </div>
         </div>
