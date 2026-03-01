@@ -7,10 +7,10 @@ import btControlImg from '../assets/images/btcontrol.jpg';
 import bitFlashImg from '../assets/images/bitFlash.png';
 
 const projects = [
-    { title: "PyCom", desc: "Online Python Compiler", link: "https://pycom.chandusurisetty.in/", img: pyComImg },
-    { title: "UnChat", desc: "Ephemeral Real-time Chat", link: "https://unchat.chandusurisetty.in/", img: unChatImg },
-    { title: "BT Control", desc: "Smart Bluetooth Controller", link: "https://play.google.com/store/apps/details?id=com.tabba.btcontrol", img: btControlImg },
-    // { title: "BitFlash", desc: "Morse Code Flash Reader", link: "#", img: bitFlashImg }
+    { title: "PyCom", desc: "Online Python Compiler", link: "https://pycom.chandusurisetty.in/", img: pyComImg, tools: ["Python", "Flask", "React", "Docker"] },
+    { title: "UnChat", desc: "Ephemeral Real-time Chat", link: "https://unchat.chandusurisetty.in/", img: unChatImg, tools: ["Flutter", "Dart", "Firebase", "WebSockets"] },
+    { title: "BT Control", desc: "Smart Bluetooth Controller", link: "https://play.google.com/store/apps/details?id=com.tabba.btcontrol", img: btControlImg, tools: ["Android", "Java", "Arduino", "Bluetooth SDK"] },
+    // { title: "BitFlash", desc: "Morse Code Flash Reader", link: "#", img: bitFlashImg, tools: ["React Native", "Tensorflow", "OpenCV"] }
 ];
 
 // Separate BentoCard component to manage its own mouse state for the 3D tilt
@@ -62,32 +62,49 @@ const RecentProjects = () => {
                     {projects.map((proj, idx) => (
                         <motion.div
                             key={idx}
-                            className="carousel-item"
+                            className="carousel-item flip-card"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ delay: idx * 0.1, type: "spring", stiffness: 200 }}
-                            whileHover={{ scale: 1.05 }}
                         >
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                className="imglink"
-                                href={proj.link}
-                                onClick={(e) => {
-                                    if (isDragging) {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                    }
-                                }}
+                            <motion.div
+                                className="flip-card-inner"
+                                whileHover={{ rotateY: 180 }}
+                                transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
                             >
-                                <div className="projimg" style={{ background: `url(${proj.img}) center/cover no-repeat` }}>
-                                    <div className="bento-content">
-                                        <h3>{proj.title}</h3>
-                                        <p>{proj.desc}</p>
+                                {/* Front Face */}
+                                <div className="flip-card-front">
+                                    <div className="projimg" style={{ background: `url(${proj.img}) center/cover no-repeat` }}>
+                                        <div className="bento-content">
+                                            <h3>{proj.title}</h3>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
+
+                                {/* Back Face */}
+                                <a
+                                    className="flip-card-back"
+                                    href={proj.link}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    onClick={(e) => {
+                                        if (isDragging) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        }
+                                    }}
+                                >
+                                    <h3>{proj.title}</h3>
+                                    <p>{proj.desc}</p>
+                                    <div className="tech-stack">
+                                        {proj.tools && proj.tools.map((tool, index) => (
+                                            <span key={index} className="tech-badge">{tool}</span>
+                                        ))}
+                                    </div>
+                                    <span className="view-project-btn">View Project ↗</span>
+                                </a>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </motion.div>
