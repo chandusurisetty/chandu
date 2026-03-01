@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -10,9 +8,6 @@ import ContactBar from '../components/ContactBar';
 import Footer from '../components/Footer';
 
 const Home = () => {
-    useEffect(() => {
-        AOS.init();
-    }, []);
 
     return (
         <>

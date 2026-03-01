@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../index.css';
 
 import Footer from '../components/Footer';
 
 const UnchatPrivacy = () => {
-    useEffect(() => {
-        AOS.init();
-    }, []);
-
     return (
         <>
             <div className="container">
