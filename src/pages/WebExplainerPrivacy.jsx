@@ -21,7 +21,7 @@ const subHeadingStyle = {
     fontSize: '1rem',
 };
 
-const PdfExplainerPrivacy = () => {
+const WebExplainerPrivacy = () => {
     return (
         <>
             <div className="container">
@@ -39,19 +39,19 @@ const PdfExplainerPrivacy = () => {
                 <div className="introBar" style={{ minHeight: '60vh', alignItems: 'flex-start', paddingTop: '2rem', paddingBottom: '4rem' }}>
                     <div className="brefe" style={{ maxWidth: '900px', width: '100%', margin: '0 auto' }}>
                         <h1 className="iamchandu" style={{ fontSize: '2.5rem', marginBottom: '1rem', whiteSpace: 'normal', color: 'var(--text-primary)' }}>
-                            Privacy Policy for PDF Explainer
+                            Privacy Policy for Web Explainer AI
                         </h1>
                         <p className="bio" style={{ marginBottom: '2rem' }}>Last updated: March 15, 2026</p>
 
                         <div className="privacy-content" style={{ color: 'var(--text-secondary)', lineHeight: '1.8', fontSize: '1.1rem' }}>
                             <p style={{ marginBottom: '1rem' }}>
-                                This Privacy Policy explains how PDF Explainer (the "Extension") handles your information when you use the Chrome extension.
+                                This Privacy Policy explains how Web Explainer AI (the "Extension") handles your information when you use the Chrome extension.
                                 By installing or using the Extension, you agree to the practices described below.
                             </p>
 
                             <h3 style={sectionHeadingStyle}>1. Overview</h3>
                             <p style={{ marginBottom: '1.5rem' }}>
-                                PDF Explainer helps you understand PDF content by sending selected text to an AI language model.
+                                Web Explainer AI helps you understand web and document content by sending selected text to an AI language model.
                                 We prioritize privacy and keep data handling minimal.
                             </p>
 
@@ -193,4 +193,4 @@ const PdfExplainerPrivacy = () => {
     );
 };
 
-export default PdfExplainerPrivacy;
+export default WebExplainerPrivacy;
