@@ -7,6 +7,7 @@ import MoodshiftPrivacy from './pages/MoodshiftPrivacy';
 import StylesniperPrivacy from './pages/StylesniperPrivacy';
 import AutoloopPrivacy from './pages/AutoloopPrivacy';
 import WebExplainerPrivacy from './pages/WebExplainerPrivacy';
+import OmniControlPrivacy from './pages/OmniControlPrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -22,6 +23,8 @@ function App() {
           <Route path="/apps/moodshift/privacy" element={<MoodshiftPrivacy />} />
           <Route path="/apps/stylesniper/privacy" element={<StylesniperPrivacy />} />
           <Route path="/apps/autoloop/privacy" element={<AutoloopPrivacy />} />
+          <Route path="/apps/omnicontrol/privacy" element={<OmniControlPrivacy />} />
+          <Route path="/apps/omnicontrol/privacy-policy.html" element={<OmniControlPrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
           <Route path="/webexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
         </Routes>
