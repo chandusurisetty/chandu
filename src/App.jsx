@@ -8,6 +8,7 @@ import StylesniperPrivacy from './pages/StylesniperPrivacy';
 import AutoloopPrivacy from './pages/AutoloopPrivacy';
 import WebExplainerPrivacy from './pages/WebExplainerPrivacy';
 import OmniControlPrivacy from './pages/OmniControlPrivacy';
+import PocketHostPrivacy from './pages/PocketHostPrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -25,6 +26,8 @@ function App() {
           <Route path="/apps/autoloop/privacy" element={<AutoloopPrivacy />} />
           <Route path="/apps/omnicontrol/privacy" element={<OmniControlPrivacy />} />
           <Route path="/apps/omnicontrol/privacy-policy.html" element={<OmniControlPrivacy />} />
+          <Route path="/apps/pockethost/privacy" element={<PocketHostPrivacy />} />
+          <Route path="/apps/pockethost/privacy-policy.html" element={<PocketHostPrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
           <Route path="/webexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
         </Routes>
