@@ -65,7 +65,7 @@ const ContactBar = () => {
                         <motion.a href="https://linkedin.com/in/chandusurisetty" target="_blank" rel="noreferrer" whileHover={{ y: -5 }}>
                             <FaLinkedin />
                         </motion.a>
-                        <motion.a href="https://instagram.com/chandusurisetty" target="_blank" rel="noreferrer" whileHover={{ y: -5 }}>
+                        <motion.a href="https://instagram.com/chandu_surisetty" target="_blank" rel="noreferrer" whileHover={{ y: -5 }}>
                             <FaInstagram />
                         </motion.a>
                     </div>
