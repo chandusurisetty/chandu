@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'd088baf7-65e2-47bc-963b-6a9ce1ae90f7';
+
 const ContactBar = () => {
     return (
         <div className="container3" id="contact">
@@ -20,7 +22,7 @@ const ContactBar = () => {
 
                     <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         {/* Web3Forms Access Key is securely loaded from your local .env file */}
-                        <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
+                        <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
 
                         <div className="form-group">
                             <label>Your Name:</label>
