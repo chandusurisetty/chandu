@@ -9,6 +9,7 @@ import AutoloopPrivacy from './pages/AutoloopPrivacy';
 import WebExplainerPrivacy from './pages/WebExplainerPrivacy';
 import OmniControlPrivacy from './pages/OmniControlPrivacy';
 import PocketHostPrivacy from './pages/PocketHostPrivacy';
+import MyslatePrivacy from './pages/MyslatePrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/apps/omnicontrol/privacy-policy.html" element={<OmniControlPrivacy />} />
           <Route path="/apps/pockethost/privacy" element={<PocketHostPrivacy />} />
           <Route path="/apps/pockethost/privacy-policy.html" element={<PocketHostPrivacy />} />
+          <Route path="/apps/myslate/privacy" element={<MyslatePrivacy />} />
+          <Route path="/apps/myslate/privacy-policy.html" element={<MyslatePrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
           <Route path="/webexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
         </Routes>
