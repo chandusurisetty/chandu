@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "updated_at": "2026-04-30T00:00:00Z",
+  "updated_at": "2026-04-30T18:18:00Z",
   "models": [
     {
       "id": "qwen2_5_0_5b_instruct_q4_k_m",
       "name": "Qwen2.5 0.5B Instruct (Q4_K_M)",
       "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf",
-      "bytes": 0,
+      "bytes": 491400032,
       "sha256": "",
-      "license": "Apache-2.0 (verify in repo)",
+      "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": true,
       "tags": ["small", "fast", "chat"]
@@ -17,9 +17,9 @@
       "id": "qwen2_5_1_5b_instruct_q4_k_m",
       "name": "Qwen2.5 1.5B Instruct (Q4_K_M)",
       "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf",
-      "bytes": 0,
+      "bytes": 1117320736,
       "sha256": "",
-      "license": "Apache-2.0 (verify in repo)",
+      "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": true,
       "tags": ["balanced", "chat"]
@@ -28,9 +28,9 @@
       "id": "qwen2_5_3b_instruct_q4_k_m",
       "name": "Qwen2.5 3B Instruct (Q4_K_M)",
       "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf",
-      "bytes": 0,
+      "bytes": 2104932768,
       "sha256": "",
-      "license": "Apache-2.0 (verify in repo)",
+      "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": false,
       "tags": ["better-quality", "chat"]
