@@ -875,6 +875,18 @@ strong {
     background: rgba(15, 23, 42, 0.6);
 }
 
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: rgba(255, 107, 107, 0.9);
+    box-shadow: 0 0 0 1px rgba(255, 107, 107, 0.2);
+}
+
+.field-error {
+    color: #ff8b8b;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
 .submit-btn {
     align-self: flex-start;
     padding: 1rem 2.5rem;
@@ -888,6 +900,32 @@ strong {
     font-size: 1.1rem;
     margin-top: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.submit-toast {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.submit-toast.success {
+    color: var(--accent-cyan);
+    background: rgba(34, 211, 238, 0.08);
+    border-color: rgba(34, 211, 238, 0.24);
+}
+
+.submit-toast.error {
+    color: #ff9b9b;
+    background: rgba(255, 107, 107, 0.08);
+    border-color: rgba(255, 107, 107, 0.24);
 }
 
 /* Right Column: Info */

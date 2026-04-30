@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-30T00:00:00Z",
+  "models": [
+    {
+      "id": "qwen2_5_0_5b_instruct_q4_k_m",
+      "name": "Qwen2.5 0.5B Instruct (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Apache-2.0 (verify for the exact model you host)",
+      "source": "your-website",
+      "recommended": true,
+      "tags": ["small", "fast", "chat"]
+    },
+    {
+      "id": "qwen2_5_1_5b_instruct_q4_k_m",
+      "name": "Qwen2.5 1.5B Instruct (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Apache-2.0 (verify for the exact model you host)",
+      "source": "your-website",
+      "recommended": true,
+      "tags": ["balanced", "chat"]
+    },
+    {
+      "id": "qwen2_5_3b_instruct_q4_k_m",
+      "name": "Qwen2.5 3B Instruct (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/qwen2.5-3b-instruct-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Apache-2.0 (verify for the exact model you host)",
+      "source": "your-website",
+      "recommended": false,
+      "tags": ["better-quality", "chat"]
+    },
+    {
+      "id": "phi3_5_mini_instruct_q4_k_m",
+      "name": "Phi-3.5 Mini Instruct (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/phi-3.5-mini-instruct-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Microsoft Phi License (verify redistribution rights)",
+      "source": "your-website",
+      "recommended": false,
+      "tags": ["small", "reasoning-lite", "chat"]
+    },
+    {
+      "id": "gemma_2_2b_it_q4_k_m",
+      "name": "Gemma 2 2B IT (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/gemma-2-2b-it-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Gemma License (verify redistribution rights)",
+      "source": "your-website",
+      "recommended": false,
+      "tags": ["chat", "small"]
+    },
+    {
+      "id": "mistral_7b_instruct_v0_3_q4_k_m",
+      "name": "Mistral 7B Instruct v0.3 (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/mistral-7b-instruct-v0.3-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Apache-2.0 (verify for the exact model you host)",
+      "source": "your-website",
+      "recommended": false,
+      "tags": ["chat", "bigger", "higher-quality"]
+    },
+    {
+      "id": "tinyllama_1_1b_chat_q4_k_m",
+      "name": "TinyLlama 1.1B Chat (Q4_K_M)",
+      "url": "https://YOUR-DOMAIN.com/models/tinyllama-1.1b-chat-q4_k_m.gguf",
+      "bytes": 0,
+      "sha256": "",
+      "license": "Apache-2.0 (verify)",
+      "source": "your-website",
+      "recommended": true,
+      "tags": ["very-small", "very-fast", "starter"]
+    }
+  ]
+}
