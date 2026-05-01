@@ -10,6 +10,7 @@ import WebExplainerPrivacy from './pages/WebExplainerPrivacy';
 import OmniControlPrivacy from './pages/OmniControlPrivacy';
 import PocketHostPrivacy from './pages/PocketHostPrivacy';
 import MyslatePrivacy from './pages/MyslatePrivacy';
+import PocketaiPrivacy from './pages/PocketaiPrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -31,6 +32,8 @@ function App() {
           <Route path="/apps/pockethost/privacy-policy.html" element={<PocketHostPrivacy />} />
           <Route path="/apps/myslate/privacy" element={<MyslatePrivacy />} />
           <Route path="/apps/myslate/privacy-policy.html" element={<MyslatePrivacy />} />
+          <Route path="/apps/pocketai/privacy" element={<PocketaiPrivacy />} />
+          <Route path="/apps/pocketai/privacy-policy.html" element={<PocketaiPrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
           <Route path="/webexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
         </Routes>
