@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-04-30T18:18:00Z",
+  "updated_at": "2026-05-16T00:00:00Z",
   "models": [
+    {
+      "id": "tinyllama_1_1b_chat_q4_k_m",
+      "name": "TinyLlama 1.1B Chat v1.0 (Q4_K_M)",
+      "url": "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
+      "bytes": 668788096,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "small",
+        "very-fast",
+        "chat"
+      ]
+    },
     {
       "id": "qwen2_5_0_5b_instruct_q4_k_m",
       "name": "Qwen2.5 0.5B Instruct (Q4_K_M)",
@@ -11,7 +27,12 @@
       "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": true,
-      "tags": ["small", "fast", "chat"]
+      "tags": [
+        "slm",
+        "small",
+        "very-fast",
+        "chat"
+      ]
     },
     {
       "id": "qwen2_5_1_5b_instruct_q4_k_m",
@@ -22,7 +43,76 @@
       "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": true,
-      "tags": ["balanced", "chat"]
+      "tags": [
+        "slm",
+        "balanced",
+        "fast",
+        "chat"
+      ]
+    },
+    {
+      "id": "qwen2_5_coder_1_5b_instruct_q4_k_m",
+      "name": "Qwen2.5 Coder 1.5B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Qwen2.5-Coder-1.5B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf",
+      "bytes": 986048800,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "coding",
+        "fast",
+        "developer"
+      ]
+    },
+    {
+      "id": "llama_3_2_1b_instruct_q4_k_m",
+      "name": "Llama 3.2 1B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+      "bytes": 807694464,
+      "sha256": "",
+      "license": "Llama-3.2",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "fast",
+        "chat",
+        "stable"
+      ]
+    },
+    {
+      "id": "smarter_default_llama_3_2_3b_instruct_q4_k_m",
+      "name": "Llama 3.2 3B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+      "bytes": 2019377696,
+      "sha256": "",
+      "license": "Llama-3.2",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "balanced",
+        "quality",
+        "chat"
+      ]
+    },
+    {
+      "id": "gemma2_2b_it_q4_k_m",
+      "name": "Gemma 2 2B IT (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/gemma-2-2b-it-GGUF/resolve/main/gemma-2-2b-it-Q4_K_M.gguf",
+      "bytes": 1708582752,
+      "sha256": "",
+      "license": "Gemma",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "balanced",
+        "chat",
+        "quality"
+      ]
     },
     {
       "id": "qwen2_5_3b_instruct_q4_k_m",
@@ -33,7 +123,28 @@
       "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": false,
-      "tags": ["better-quality", "chat"]
+      "tags": [
+        "slm",
+        "better-quality",
+        "chat",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "phi_3_5_mini_instruct_q4_k_m",
+      "name": "Phi-3.5 Mini Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q4_K_M.gguf",
+      "bytes": 2393232672,
+      "sha256": "",
+      "license": "Microsoft",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "reasoning",
+        "coding",
+        "quality"
+      ]
     }
   ]
 }
