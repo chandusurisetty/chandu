@@ -22,10 +22,11 @@ const PocketaiPrivacy = () => {
                 <div className="introBar" style={{ minHeight: '60vh', alignItems: 'flex-start', paddingTop: '2rem', paddingBottom: '4rem' }}>
                     <div className="brefe" style={{ maxWidth: '900px', width: '100%', margin: '0 auto' }}>
                         <h1 className="iamchandu" style={{ fontSize: '2.5rem', marginBottom: '1rem', whiteSpace: 'normal', color: 'var(--text-primary)' }}>Privacy Policy for PocketAI</h1>
-                        <p className="bio" style={{ marginBottom: '2rem' }}>Effective Date: May 1, 2026</p>
+                        <p className="bio" style={{ marginBottom: '2rem' }}>Effective Date: May 31, 2026</p>
 
                         <div className="privacy-content" style={{ color: 'var(--text-secondary)', lineHeight: '1.8', fontSize: '1.1rem' }}>
                             <p style={{ marginBottom: '1.5rem' }}>PocketAI is designed to run AI features locally on your device.</p>
+                            <p style={{ marginBottom: '1.5rem' }}>PocketAI may also display ads. This means certain limited data may be processed by ad partners as described below.</p>
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>1. Information We Collect</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
@@ -44,39 +45,49 @@ const PocketaiPrivacy = () => {
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>Internet may be used only for optional actions such as downloading AI model files or app dependencies or updates.</li>
                                 <li style={{ marginTop: '0.5rem' }}>We do not upload your chat or note content as part of normal app use.</li>
+                                <li style={{ marginTop: '0.5rem' }}>Internet access is also used to request and deliver ads from third-party ad networks.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>4. Data Sharing</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>4. Advertising and Third-Party Services</h3>
+                            <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
+                                <li>PocketAI may use third-party ad services to display ads in the app.</li>
+                                <li style={{ marginTop: '0.5rem' }}>Ad providers may collect or receive data such as advertising ID, device information, approximate location derived from IP address, and ad interaction events.</li>
+                                <li style={{ marginTop: '0.5rem' }}>This data is used by ad providers for ad delivery, frequency capping, fraud prevention, and measurement under their own privacy policies.</li>
+                            </ul>
+
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>5. Data Sharing</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>We do not sell your personal information.</li>
                                 <li style={{ marginTop: '0.5rem' }}>We do not share your local chat or notes data with third parties unless required by law.</li>
+                                <li style={{ marginTop: '0.5rem' }}>Third-party ad networks may process limited technical data as needed to serve ads.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>5. Data Retention and Control</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>6. Data Retention and Control</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>You can delete chats, notes, and models inside the app.</li>
                                 <li style={{ marginTop: '0.5rem' }}>Uninstalling the app typically removes app-local data, subject to your device or OS behavior.</li>
+                                <li style={{ marginTop: '0.5rem' }}>You can reset your device advertising ID or adjust ad personalization settings through your device settings where supported.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>6. Security</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>7. Security</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>We apply reasonable measures to protect local app data.</li>
                                 <li style={{ marginTop: '0.5rem' }}>No method of storage or transmission is 100% secure.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>7. Children&apos;s Privacy</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>8. Children&apos;s Privacy</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>The app is not directed to children under 13.</li>
                                 <li style={{ marginTop: '0.5rem' }}>We do not knowingly collect personal information from children.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>8. Changes to This Policy</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>9. Changes to This Policy</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>We may update this policy from time to time.</li>
                                 <li style={{ marginTop: '0.5rem' }}>Updated versions will include a revised Effective Date.</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>9. Contact</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>10. Contact</h3>
                             <p style={{ marginBottom: '1rem' }}>For privacy questions, contact:</p>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '3rem' }}>
                                 <li>Email: <a href="mailto:support@tabba.app" style={{ color: 'var(--accent-cyan)', textDecoration: 'none' }}>support@tabba.app</a></li>
