@@ -27,7 +27,7 @@ const PocketHostPrivacy = () => {
                         <div className="privacy-content" style={{ color: 'var(--text-secondary)', lineHeight: '1.8', fontSize: '1.1rem' }}>
                             <p style={{ marginBottom: '1rem' }}>This Privacy Policy explains how PocketHost ("the App") handles information when you use the App.</p>
                             <p style={{ marginBottom: '1.5rem' }}>PocketHost lets you host multiple websites directly from your Android device. We designed PocketHost to keep data handling minimal and under your control.</p>
-                            <p style={{ marginBottom: '1.5rem' }}>PocketHost may display ads in the app. Some limited technical data may be processed by ad partners for ad delivery and measurement.</p>
+                            <p style={{ marginBottom: '1.5rem' }}>PocketHost may display ads in the app using Google AdMob. Some limited technical data may be processed by ad partners for ad delivery and measurement.</p>
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>1. Information We Collect</h3>
                             <p style={{ marginBottom: '1rem' }}>PocketHost does not require account creation and does not collect personal data such as your name, phone number, or address for normal app usage.</p>
@@ -76,8 +76,10 @@ const PocketHostPrivacy = () => {
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>7. Third-Party Services</h3>
                             <p style={{ marginBottom: '1rem' }}>PocketHost may depend on operating system components, open-source libraries, and ad service providers. These services may have their own privacy practices.</p>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
+                                <li>PocketHost uses Google AdMob for in-app advertising.</li>
                                 <li>Ad providers may collect or receive data such as advertising ID, device details, approximate location derived from IP address, and ad interaction events.</li>
                                 <li style={{ marginTop: '0.5rem' }}>You can manage ad personalization and reset your advertising ID in your device settings where available.</li>
+                                <li style={{ marginTop: '0.5rem' }}>For details about data handling by AdMob, review Google&apos;s Privacy Policy and AdMob documentation.</li>
                             </ul>
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>8. Children</h3>

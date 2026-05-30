@@ -50,9 +50,10 @@ const PocketaiPrivacy = () => {
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>4. Advertising and Third-Party Services</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
-                                <li>PocketAI may use third-party ad services to display ads in the app.</li>
+                                <li>PocketAI uses Google AdMob to display ads in the app.</li>
                                 <li style={{ marginTop: '0.5rem' }}>Ad providers may collect or receive data such as advertising ID, device information, approximate location derived from IP address, and ad interaction events.</li>
                                 <li style={{ marginTop: '0.5rem' }}>This data is used by ad providers for ad delivery, frequency capping, fraud prevention, and measurement under their own privacy policies.</li>
+                                <li style={{ marginTop: '0.5rem' }}>For details about how Google handles data for AdMob, review Google&apos;s Privacy Policy and AdMob documentation.</li>
                             </ul>
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>5. Data Sharing</h3>
