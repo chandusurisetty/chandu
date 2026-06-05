@@ -13,6 +13,7 @@ import MyslatePrivacy from './pages/MyslatePrivacy';
 import PocketaiPrivacy from './pages/PocketaiPrivacy';
 import NetlyzerPrivacy from './pages/NetlyzerPrivacy';
 import NanoBotsArenaPrivacy from './pages/NanoBotsArenaPrivacy';
+import BtcontrolPrivacy from './pages/BtcontrolPrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -36,6 +37,8 @@ function App() {
           <Route path="/apps/myslate/privacy-policy.html" element={<MyslatePrivacy />} />
           <Route path="/apps/pocketai/privacy" element={<PocketaiPrivacy />} />
           <Route path="/apps/pocketai/privacy-policy.html" element={<PocketaiPrivacy />} />
+          <Route path="/apps/btcontrol/privacy" element={<BtcontrolPrivacy />} />
+          <Route path="/apps/btcontrol/privacy-policy.html" element={<BtcontrolPrivacy />} />
           <Route path="/apps/nanobots-arena/privacy" element={<NanoBotsArenaPrivacy />} />
           <Route path="/apps/nanobots-arena/privacy-policy.html" element={<NanoBotsArenaPrivacy />} />
           <Route path="/apps/netlyzer/privacy" element={<NetlyzerPrivacy />} />
