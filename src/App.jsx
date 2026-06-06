@@ -14,6 +14,7 @@ import PocketaiPrivacy from './pages/PocketaiPrivacy';
 import NetlyzerPrivacy from './pages/NetlyzerPrivacy';
 import NanoBotsArenaPrivacy from './pages/NanoBotsArenaPrivacy';
 import BtcontrolPrivacy from './pages/BtcontrolPrivacy';
+import MediaForgePrivacy from './pages/MediaForgePrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -41,6 +42,8 @@ function App() {
           <Route path="/apps/btcontrol/privacy-policy.html" element={<BtcontrolPrivacy />} />
           <Route path="/apps/nanobots-arena/privacy" element={<NanoBotsArenaPrivacy />} />
           <Route path="/apps/nanobots-arena/privacy-policy.html" element={<NanoBotsArenaPrivacy />} />
+          <Route path="/apps/mediaforge/privacy" element={<MediaForgePrivacy />} />
+          <Route path="/apps/mediaforge/privacy-policy.html" element={<MediaForgePrivacy />} />
           <Route path="/apps/netlyzer/privacy" element={<NetlyzerPrivacy />} />
           <Route path="/apps/netlyzer/privacy-policy.html" element={<NetlyzerPrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
