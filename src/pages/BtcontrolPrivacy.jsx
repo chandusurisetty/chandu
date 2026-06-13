@@ -22,7 +22,7 @@ const BtcontrolPrivacy = () => {
                 <div className="introBar" style={{ minHeight: '60vh', alignItems: 'flex-start', paddingTop: '2rem', paddingBottom: '4rem' }}>
                     <div className="brefe" style={{ maxWidth: '900px', width: '100%', margin: '0 auto' }}>
                         <h1 className="iamchandu" style={{ fontSize: '2.5rem', marginBottom: '1rem', whiteSpace: 'normal', color: 'var(--text-primary)' }}>Privacy Policy for BTControl</h1>
-                        <p className="bio" style={{ marginBottom: '2rem' }}>Effective Date: June 5, 2026</p>
+                        <p className="bio" style={{ marginBottom: '2rem' }}>Effective Date: June 13, 2026</p>
 
                         <div className="privacy-content" style={{ color: 'var(--text-secondary)', lineHeight: '1.8', fontSize: '1.1rem' }}>
                             <p style={{ marginBottom: '1rem' }}><strong>BTControl</strong> (the "App") is developed by <strong>Tabba</strong> ("we", "us", or "our").</p>
@@ -35,6 +35,7 @@ const BtcontrolPrivacy = () => {
                                 <li style={{ marginTop: '0.5rem' }}>Crash diagnostics, if Crash Reports is enabled.</li>
                                 <li style={{ marginTop: '0.5rem' }}>Advertising-related consent signals and ad request metadata, if ads are enabled.</li>
                                 <li style={{ marginTop: '0.5rem' }}>Account data you provide for sign-in features, if those features are used.</li>
+                                <li style={{ marginTop: '0.5rem' }}>Purchase and subscription metadata (non-sensitive transaction IDs, subscription status, and purchase tokens) to manage premium features.</li>
                             </ul>
 
                             <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>2. How We Use Information</h3>
@@ -61,12 +62,20 @@ const BtcontrolPrivacy = () => {
                                 <li style={{ marginTop: '0.5rem' }}>Manage Ad Privacy Choices: opens the Google User Messaging Platform (UMP) privacy options form when available for your region.</li>
                                 <li style={{ marginTop: '0.5rem' }}>You can change these settings at any time.</li>
                             </ul>
+                            <p style={{ marginBottom: '1.5rem' }}>We do not require you to enable analytics or crash reporting to use core Bluetooth control functionality.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>5. Regional Privacy Rights (GDPR + US State Privacy Laws)</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>5. In-App Purchases and Subscriptions</h3>
+                            <p style={{ marginBottom: '1rem' }}>When you purchase a premium upgrade or subscription within BTControl:</p>
+                            <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
+                                <li><strong>Payment Processing:</strong> Payments are securely processed by Google Play Store (Google Play Billing). We do not collect, store, or have access to your credit card, debit card, or billing address details.</li>
+                                <li style={{ marginTop: '0.5rem' }}><strong>Subscription Management:</strong> We use RevenueCat to verify and manage subscription status, receipt validation, and premium access entitlements. RevenueCat may process transaction metadata such as transaction time, package ID, and purchase tokens linked to an anonymous or authenticated user ID.</li>
+                            </ul>
+
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>6. Regional Privacy Rights (GDPR + US State Privacy Laws)</h3>
                             <p style={{ marginBottom: '1rem' }}>If you are in the EEA, United Kingdom, or Switzerland, you may have rights under GDPR/UK GDPR, including rights to access, correct, delete, restrict processing, object to processing, and data portability where applicable.</p>
                             <p style={{ marginBottom: '1.5rem' }}>If you are in California or another US state with a consumer privacy law (including, where applicable, CA, CO, CT, VA, and UT), you may have rights to know, access, correct, delete, and opt out of certain processing, including targeted advertising and, where applicable, sale or sharing of personal information.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>6. Legal Bases (GDPR/UK GDPR)</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>7. Legal Bases (GDPR/UK GDPR)</h3>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '1.5rem' }}>
                                 <li>Performance of a contract (providing requested app features).</li>
                                 <li style={{ marginTop: '0.5rem' }}>Legitimate interests (service security and operations, balanced with user rights).</li>
@@ -74,24 +83,24 @@ const BtcontrolPrivacy = () => {
                                 <li style={{ marginTop: '0.5rem' }}>Legal obligation (where required by law).</li>
                             </ul>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>7. Sharing With Third Parties</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>8. Sharing With Third Parties</h3>
                             <p style={{ marginBottom: '1rem' }}>We use service providers and SDK partners to operate and improve the app. These may include providers for authentication, analytics, crash reporting, and advertising services.</p>
                             <p style={{ marginBottom: '1.5rem' }}>Where required by law, we provide choices and honor opt-out/consent signals before such processing occurs.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>8. Retention</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>9. Retention</h3>
                             <p style={{ marginBottom: '1rem' }}>We retain personal data only for as long as needed for the purposes described in this policy, unless a longer period is required by law.</p>
                             <p style={{ marginBottom: '1.5rem' }}>If you request deletion, we will process your request consistent with applicable law and technical constraints.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>9. Non-Discrimination</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>10. Non-Discrimination</h3>
                             <p style={{ marginBottom: '1.5rem' }}>We do not discriminate against users for exercising applicable privacy rights.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>10. Children&apos;s Privacy</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>11. Children&apos;s Privacy</h3>
                             <p style={{ marginBottom: '1.5rem' }}>BTControl is not directed to children under 13. We do not knowingly collect personal information from children.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>11. Changes to This Policy</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>12. Changes to This Policy</h3>
                             <p style={{ marginBottom: '1.5rem' }}>We may update this Privacy Policy from time to time. Updated versions will include a revised Effective Date.</p>
 
-                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>12. Contact</h3>
+                            <h3 style={{ color: 'var(--text-primary)', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'Outfit, sans-serif', letterSpacing: 'normal' }}>13. Contact</h3>
                             <p style={{ marginBottom: '1rem' }}>Privacy requests and questions:</p>
                             <ul style={{ listStyleType: 'disc', paddingLeft: '2rem', marginBottom: '3rem' }}>
                                 <li>Email: <a href="mailto:contact@chandusurisetty.in" style={{ color: 'var(--accent-cyan)', textDecoration: 'none' }}>contact@chandusurisetty.in</a></li>
