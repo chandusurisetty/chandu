@@ -15,6 +15,7 @@ import NetlyzerPrivacy from './pages/NetlyzerPrivacy';
 import NanoBotsArenaPrivacy from './pages/NanoBotsArenaPrivacy';
 import BtcontrolPrivacy from './pages/BtcontrolPrivacy';
 import MediaForgePrivacy from './pages/MediaForgePrivacy';
+import FlashBridgePrivacy from './pages/FlashBridgePrivacy';
 import CustomCursor from './components/CustomCursor';
 import './index.css';
 
@@ -44,6 +45,8 @@ function App() {
           <Route path="/apps/nanobots-arena/privacy-policy.html" element={<NanoBotsArenaPrivacy />} />
           <Route path="/apps/mediaforge/privacy" element={<MediaForgePrivacy />} />
           <Route path="/apps/mediaforge/privacy-policy.html" element={<MediaForgePrivacy />} />
+          <Route path="/apps/flashbridge/privacy" element={<FlashBridgePrivacy />} />
+          <Route path="/apps/flashbridge/privacy-policy.html" element={<FlashBridgePrivacy />} />
           <Route path="/apps/netlyzer/privacy" element={<NetlyzerPrivacy />} />
           <Route path="/apps/netlyzer/privacy-policy.html" element={<NetlyzerPrivacy />} />
           <Route path="/pdfexplainer/privacy-policy.html" element={<WebExplainerPrivacy />} />
