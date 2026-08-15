@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-05-16T00:00:00Z",
+  "updated_at": "2026-08-15T00:00:00Z",
   "models": [
     {
       "id": "qwen2_5_0_5b_instruct_q4_k_m",
@@ -19,10 +19,59 @@
       ]
     },
     {
+      "id": "smollm2_360m_instruct_q4_k_m",
+      "name": "SmolLM2 360M Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/SmolLM2-360M-Instruct-GGUF/resolve/main/SmolLM2-360M-Instruct-Q4_K_M.gguf",
+      "bytes": 284164096,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "tiny",
+        "ultra-fast",
+        "chat",
+        "low-ram"
+      ]
+    },
+    {
+      "id": "tinyllama_1_1b_chat_v1_0_q4_k_m",
+      "name": "TinyLlama 1.1B Chat v1.0 (Q4_K_M)",
+      "url": "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
+      "bytes": 701398528,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "tiny",
+        "very-fast",
+        "chat"
+      ]
+    },
+    {
       "id": "qwen2_5_1_5b_instruct_q4_k_m",
       "name": "Qwen2.5 1.5B Instruct (Q4_K_M)",
       "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf",
       "bytes": 1117320736,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "balanced",
+        "fast",
+        "chat"
+      ]
+    },
+    {
+      "id": "smollm2_1_7b_instruct_q4_k_m",
+      "name": "SmolLM2 1.7B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/SmolLM2-1.7B-Instruct-GGUF/resolve/main/SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
+      "bytes": 1138166133,
       "sha256": "",
       "license": "Apache-2.0",
       "source": "huggingface",
@@ -99,6 +148,22 @@
       ]
     },
     {
+      "id": "granite_3_1_2b_instruct_q4_k_m",
+      "name": "Granite 3.1 2B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/granite-3.1-2b-instruct-GGUF/resolve/main/granite-3.1-2b-instruct-Q4_K_M.gguf",
+      "bytes": 1664299827,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": false,
+      "tags": [
+        "slm",
+        "balanced",
+        "chat",
+        "reasoning"
+      ]
+    },
+    {
       "id": "qwen2_5_3b_instruct_q4_k_m",
       "name": "Qwen2.5 3B Instruct (Q4_K_M)",
       "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf",
@@ -115,6 +180,22 @@
       ]
     },
     {
+      "id": "qwen2_5_coder_3b_instruct_q4_k_m",
+      "name": "Qwen2.5 Coder 3B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "bytes": 2072321120,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": false,
+      "tags": [
+        "slm",
+        "coding",
+        "balanced",
+        "developer"
+      ]
+    },
+    {
       "id": "phi_3_5_mini_instruct_q4_k_m",
       "name": "Phi-3.5 Mini Instruct (Q4_K_M)",
       "url": "https://huggingface.co/bartowski/Phi-3.5-mini-instruct-GGUF/resolve/main/Phi-3.5-mini-instruct-Q4_K_M.gguf",
@@ -128,6 +209,23 @@
         "reasoning",
         "coding",
         "quality"
+      ]
+    },
+    {
+      "id": "qwen2_5_7b_instruct_q4_k_m",
+      "name": "Qwen2.5 7B Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+      "bytes": 5025111736,
+      "sha256": "",
+      "license": "Apache-2.0",
+      "source": "huggingface",
+      "recommended": false,
+      "tags": [
+        "large",
+        "quality",
+        "reasoning",
+        "chat",
+        "high-end-device"
       ]
     }
   ]
