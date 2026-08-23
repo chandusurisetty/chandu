@@ -21,6 +21,12 @@ const Header = () => {
                 />
                 <h2>Chandu-Man</h2>
             </motion.div>
+            <nav className="navcont">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </motion.header>
     );
 };

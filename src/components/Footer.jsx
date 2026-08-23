@@ -9,7 +9,7 @@ const Footer = () => {
                     <h2></h2>
                 </div>
                 <div className="cpyterms">
-                    <p>Copyright © 2023 Chandu surisetty - All Rights Reserved.</p>
+                    <p>Copyright © {new Date().getFullYear()} Chandu surisetty - All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

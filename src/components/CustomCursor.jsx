@@ -12,7 +12,12 @@ const CustomCursor = () => {
 
         const handleMouseOver = (e) => {
             const target = e.target;
-            // Expand cursor on specific interactive elements
+            if (
+                target.closest('input, textarea, select, [contenteditable="true"]')
+            ) {
+                setIsHovering(false);
+                return;
+            }
             if (
                 target.tagName.toLowerCase() === 'a' ||
                 target.tagName.toLowerCase() === 'button' ||
@@ -27,10 +32,16 @@ const CustomCursor = () => {
             }
         };
 
+        const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+        if (!isCoarsePointer) {
+            document.body.classList.add('has-custom-cursor');
+        }
+
         window.addEventListener('mousemove', updateMousePosition);
         window.addEventListener('mouseover', handleMouseOver);
 
         return () => {
+            document.body.classList.remove('has-custom-cursor');
             window.removeEventListener('mousemove', updateMousePosition);
             window.removeEventListener('mouseover', handleMouseOver);
         };
