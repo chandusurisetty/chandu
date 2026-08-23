@@ -11,8 +11,8 @@ const Home = () => {
 
     return (
         <>
+            <Header />
             <div className="container">
-                <Header />
                 <Hero />
             </div>
             <SkillBar />

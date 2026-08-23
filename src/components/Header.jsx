@@ -4,29 +4,29 @@ import { motion } from 'framer-motion';
 const Header = () => {
     return (
         <motion.header
-            className="seen"
+            className="site-header"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
-            <motion.div
-                className="name"
-                whileHover={{ scale: 1.05 }}
-            >
-                <motion.img
-                    src="/favicon.png"
-                    alt="Logo"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                />
-                <h2>Chandu-Man</h2>
-            </motion.div>
-            <nav className="navcont">
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div className="seen">
+                <a className="name" href="/">
+                    <motion.img
+                        src="/favicon.png"
+                        alt="Chandu-Man logo"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                    />
+                    <h2>Chandu-Man</h2>
+                </a>
+                <nav className="navcont" aria-label="Primary">
+                    <ul>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </motion.header>
     );
 };
