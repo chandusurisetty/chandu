@@ -572,16 +572,15 @@ strong {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1.4rem 1.5rem 1.6rem;
     z-index: 2;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.4s ease;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.8) 50%, transparent 100%);
+    transform: none;
+    opacity: 1;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.72) 62%, transparent 100%);
 }
 
 .carousel-item:hover .bento-content {
-    transform: translateY(0);
+    transform: none;
     opacity: 1;
 }
 
@@ -961,17 +960,18 @@ strong {
 
 .submit-toast {
     margin-top: 1rem;
-    padding: 0.9rem 1rem;
+    padding: 1rem 1.1rem;
     border-radius: 14px;
     border: 1px solid transparent;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.5;
+    font-weight: 600;
 }
 
 .submit-toast.success {
-    color: var(--accent-cyan);
-    background: rgba(34, 211, 238, 0.08);
-    border-color: rgba(34, 211, 238, 0.24);
+    color: #022c22;
+    background: #5eead4;
+    border-color: #2dd4bf;
 }
 
 .submit-toast.error {
