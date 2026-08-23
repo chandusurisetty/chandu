@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import pyComImg from '../assets/images/pyCom.png';
@@ -81,7 +81,7 @@ const projects = [
     },
     {
         title: "UnChat",
-        desc: "Ephemeral Real-time Chat",
+        desc: "Ephemeral rooms for real-time chat. No accounts, no leftover history.",
         link: "https://unchat.chandusurisetty.in/",
         img: unChatImg,
         tools: ["Flutter", "Dart", "Firebase", "WebSockets"],
@@ -89,7 +89,7 @@ const projects = [
     },
     {
         title: "PyCom",
-        desc: "Online Python Compiler",
+        desc: "Run Python in the browser with a clean online compiler.",
         link: "https://pycom.chandusurisetty.in/",
         img: pyComImg,
         tools: ["Python", "Flask", "React", "Docker"],
@@ -113,32 +113,69 @@ const projects = [
     },
 ];
 
+const androidApps = projects.filter((project) => project.kind === 'Android');
+const webAndExtensions = projects.filter((project) => project.kind !== 'Android');
+
+const ctaLabel = (kind) => {
+    if (kind === 'Android') {
+        return 'Play Store';
+    }
+    if (kind === 'Chrome') {
+        return 'Chrome Store';
+    }
+    return 'Open';
+};
+
+const ProjectCard = ({ project, index }) => (
+    <motion.article
+        className="project-card"
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ delay: Math.min(index * 0.06, 0.3), type: "spring", stiffness: 180 }}
+    >
+        <a
+            className="project-card-media"
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.title} ${ctaLabel(project.kind)}`}
+        >
+            <img src={project.img} alt={`${project.title} preview`} />
+        </a>
+        <div className="project-card-body">
+            <span className="project-kind">{project.kind}</span>
+            <h3>{project.title}</h3>
+            <p>{project.desc}</p>
+            <div className="tech-stack">
+                {project.tools.map((tool) => (
+                    <span key={tool} className="tech-badge">{tool}</span>
+                ))}
+            </div>
+            <a
+                className="project-cta"
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+            >
+                {ctaLabel(project.kind)} ↗
+            </a>
+        </div>
+    </motion.article>
+);
+
+const ProjectRow = ({ title, items }) => (
+    <div className="project-group">
+        <h2 className="project-group-title">{title}</h2>
+        <div className="project-row">
+            {items.map((project, index) => (
+                <ProjectCard key={project.title} project={project} index={index} />
+            ))}
+        </div>
+    </div>
+);
+
 const RecentProjects = () => {
-    const carouselRef = useRef();
-    const [width, setWidth] = useState(0);
-    const [isDragging, setIsDragging] = useState(false);
-
-    useEffect(() => {
-        const el = carouselRef.current;
-        if (!el) {
-            return undefined;
-        }
-
-        const updateWidth = () => {
-            setWidth(Math.max(0, el.scrollWidth - el.offsetWidth));
-        };
-
-        updateWidth();
-        const observer = new ResizeObserver(updateWidth);
-        observer.observe(el);
-        window.addEventListener('resize', updateWidth);
-
-        return () => {
-            observer.disconnect();
-            window.removeEventListener('resize', updateWidth);
-        };
-    }, []);
-
     return (
         <div className="container2" id="projects">
             <motion.div
@@ -147,84 +184,13 @@ const RecentProjects = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5 }}
-                style={{ marginBottom: '3rem' }}
             >
                 <h1 className="RecentProj">Featured <br /> Projects</h1>
-                <p className="swipe-hint" style={{ color: 'var(--accent-cyan)', fontFamily: 'Orbitron', fontSize: '0.9rem', marginTop: '1rem', letterSpacing: '1px' }}>
-                    ‹ SWIPE TO EXPLORE ›
-                </p>
+                <p className="swipe-hint">‹ SWIPE TO EXPLORE ›</p>
             </motion.div>
 
-            <motion.div
-                ref={carouselRef}
-                className="carousel-container"
-                whileTap={{ cursor: "grabbing" }}
-                style={{ overflow: "hidden", cursor: "grab", padding: "1rem 0" }}
-            >
-                <motion.div
-                    className="carousel-track"
-                    drag="x"
-                    dragConstraints={{ right: 0, left: -width }}
-                    dragElastic={0.2}
-                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-                    onDragStart={() => setIsDragging(true)}
-                    onDragEnd={() => {
-                        setTimeout(() => setIsDragging(false), 150);
-                    }}
-                >
-                    {projects.map((proj, idx) => (
-                        <motion.div
-                            key={proj.title}
-                            className="carousel-item flip-card"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ delay: Math.min(idx * 0.08, 0.4), type: "spring", stiffness: 200 }}
-                        >
-                            <motion.div
-                                className="flip-card-inner"
-                                whileHover={{ rotateY: 180 }}
-                                transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
-                            >
-                                <div className="flip-card-front">
-                                    <div
-                                        className="projimg"
-                                        style={{ background: `url(${proj.img}) center/cover no-repeat` }}
-                                    >
-                                        <div className="bento-content">
-                                            <span className="project-kind">{proj.kind}</span>
-                                            <h3>{proj.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <a
-                                    className="flip-card-back"
-                                    href={proj.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    onClick={(e) => {
-                                        if (isDragging) {
-                                            e.preventDefault();
-                                            e.stopPropagation();
-                                        }
-                                    }}
-                                >
-                                    <span className="project-kind">{proj.kind}</span>
-                                    <h3>{proj.title}</h3>
-                                    <p>{proj.desc}</p>
-                                    <div className="tech-stack">
-                                        {proj.tools && proj.tools.map((tool) => (
-                                            <span key={tool} className="tech-badge">{tool}</span>
-                                        ))}
-                                    </div>
-                                    <span className="view-project-btn">View Project ↗</span>
-                                </a>
-                            </motion.div>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </motion.div>
+            <ProjectRow title="Apps" items={androidApps} />
+            <ProjectRow title="Web & extensions" items={webAndExtensions} />
         </div>
     );
 };

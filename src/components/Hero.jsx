@@ -45,7 +45,7 @@ const Hero = () => {
                             contentType="html"
                         />
                     </motion.h1>
-                    <motion.p variants={itemVariants} className="bio">An Enthusiastic product designer currently shaping the future of AI with security as the main priority</motion.p>
+                    <motion.p variants={itemVariants} className="bio">Hardware engineer building Android tools, on-device AI, and privacy-first apps.</motion.p>
                     <motion.div variants={itemVariants} className="socialnetwork">
                         <a className="instalink" target="_blank" rel="noreferrer" href="https://www.instagram.com/chandu_surisetty/">
                             <img width="30px" src={instaIcon} alt="instagram" />

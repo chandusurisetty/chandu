@@ -18,6 +18,16 @@
     font-family: 'Outfit', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: 96px;
+}
+
 body {
     width: 100%;
     background-color: var(--bg-primary);
@@ -94,6 +104,21 @@ strong {
     padding: 0 5%;
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(18px);
+    background: rgba(2, 6, 23, 0.78);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.site-header .seen {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.9rem 5%;
+}
+
 .seen {
     padding: 2rem 0;
     display: flex;
@@ -106,6 +131,7 @@ strong {
     display: flex;
     align-items: center;
     gap: 16px;
+    text-decoration: none;
 }
 
 .name h2,
@@ -515,32 +541,7 @@ strong {
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 4rem;
-}
-
-.carousel-container {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    display: block;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem 5%;
-    /* Allow space for hover scale */
-    width: max-content;
-    margin: 0 auto;
-}
-
-.carousel-item {
-    width: 320px;
-    height: 480px;
-    flex-shrink: 0;
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    transform-origin: center;
+    margin-bottom: 2rem;
 }
 
 .RecentProj {
@@ -548,75 +549,96 @@ strong {
     line-height: 1.2;
 }
 
-.imglink {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
+.project-group {
+    margin-bottom: 2.5rem;
 }
 
-.projimg {
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    position: relative;
-    background-color: #0b1224;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.project-group-title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    margin: 0 0 1rem;
+}
+
+.project-row {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    padding: 0.4rem 0 1.4rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-indigo) transparent;
+}
+
+.project-card {
+    flex: 0 0 min(320px, 82vw);
+    scroll-snap-align: start;
+    background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
-}
-
-.bento-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.4rem 1.5rem 1.6rem;
-    z-index: 2;
-    transform: none;
-    opacity: 1;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.72) 62%, transparent 100%);
-}
-
-.carousel-item:hover .bento-content {
-    transform: none;
-    opacity: 1;
-}
-
-.project-cover {
-    position: absolute;
-    inset: 0;
+    border-radius: 22px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    background:
-        radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--cover-accent) 35%, transparent), transparent 45%),
-        linear-gradient(160deg, #0b1224 0%, #020617 70%);
+    min-height: 100%;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.project-cover-mark {
-    width: 92px;
-    height: 92px;
-    border-radius: 28px;
+.project-card:hover {
+    border-color: rgba(34, 211, 238, 0.4);
+    box-shadow: 0 16px 36px rgba(34, 211, 238, 0.12);
+    transform: translateY(-4px);
+}
+
+.project-card-media {
+    display: block;
+    height: 210px;
+    background: #0b1224;
+}
+
+.project-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card-body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    color: #020617;
-    background: var(--cover-accent);
-    box-shadow: 0 12px 40px color-mix(in srgb, var(--cover-accent) 45%, transparent);
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.1rem 1.15rem 1.25rem;
+    flex: 1;
 }
 
-.project-cover-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+.project-card-body h3 {
+    font-size: 1.25rem;
     color: var(--text-primary);
+    margin: 0;
+}
+
+.project-card-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+}
+
+.project-cta {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    color: #020617;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-indigo));
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
 }
 
 .project-kind {
@@ -633,38 +655,12 @@ strong {
     background: rgba(34, 211, 238, 0.1);
 }
 
-.bento-content h3 {
-    font-size: 1.8rem;
-    font-family: 'Orbitron', sans-serif;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-}
-
-.bento-content p {
-    font-size: 1rem;
-    color: var(--accent-cyan);
-    margin: 0;
-}
-
-.projimg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent);
-    opacity: 0.5;
-    transition: opacity 0.3s;
-}
-
-.carousel-item:hover .projimg {
-    box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
-    border-color: rgba(34, 211, 238, 0.4);
-}
-
-.carousel-item:hover .projimg::before {
-    opacity: 0.8;
-}
-
 .swipe-hint {
+    color: var(--accent-cyan);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
     animation: pulse 2s infinite;
 }
 
@@ -682,67 +678,10 @@ strong {
     }
 }
 
-/* 3D Flip Card Physics */
-.flip-card {
-    perspective: 1500px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.flip-card-front {
-    z-index: 2;
-}
-
-.flip-card-back {
-    background: rgba(15, 23, 42, 0.95);
-    border: 1px solid var(--accent-cyan);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    backdrop-filter: blur(10px);
-}
-
-.flip-card-back h3 {
-    color: var(--accent-cyan);
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.flip-card-back p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
 }
 
 .tech-badge {
@@ -762,11 +701,6 @@ strong {
     font-family: 'Orbitron', sans-serif;
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
-}
-
-.view-project-btn:hover {
-    color: var(--accent-cyan);
-    border-color: var(--accent-cyan);
 }
 
 .allProj strong {
@@ -1066,9 +1000,33 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.9rem;
+}
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
 }
 
 .cpyterms p {
@@ -1144,7 +1102,40 @@ footer {
     .seen {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.8rem;
+    }
+
+    .site-header .name h2 {
+        font-size: 2.2rem;
+    }
+
+    .site-header .name img,
+    .site-header .brand-logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .navcont ul {
+        gap: 1.2rem;
+    }
+
+    .navcont ul a {
+        font-size: 0.95rem;
+    }
+
+    .footlogo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .RecentProj {
+        font-size: 2.2rem;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
     }
 
     .iamchandu {
