@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'd088baf7-65e2-47bc-963b-6a9ce1ae90f7';
 
 const ContactBar = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,6 +29,10 @@ const ContactBar = () => {
 
     const handleFieldChange = (event) => {
         const { name, value } = event.target;
+
+        if (submitState.type === 'success') {
+            setSubmitState({ type: '', message: '' });
+        }
 
         setFieldErrors((currentErrors) => {
             if (!currentErrors[name]) {
@@ -67,14 +71,6 @@ const ContactBar = () => {
             }
         }
 
-        if (!WEB3FORMS_ACCESS_KEY) {
-            setSubmitState({
-                type: 'error',
-                message: 'The contact form is not configured yet. Email me at contact@chandusurisetty.in.',
-            });
-            return;
-        }
-
         if (Object.keys(nextErrors).length > 0) {
             setFieldErrors(nextErrors);
             setSubmitState({
@@ -107,7 +103,7 @@ const ContactBar = () => {
             setFieldErrors({});
             setSubmitState({
                 type: 'success',
-                message: 'Message sent successfully. I will get back to you soon.',
+                message: 'Message sent. I will get back to you soon.',
             });
         } catch (error) {
             setSubmitState({
@@ -135,9 +131,7 @@ const ContactBar = () => {
                     <p>If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
 
                     <form className="contact-form" onSubmit={handleSubmit}>
-                        {WEB3FORMS_ACCESS_KEY && (
-                            <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-                        )}
+                        <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
                         <input type="hidden" name="subject" value="New portfolio contact form submission" />
                         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
 
@@ -158,16 +152,17 @@ const ContactBar = () => {
                         </div>
                         <motion.button
                             type="submit"
-                            disabled={isSubmitting || !WEB3FORMS_ACCESS_KEY}
+                            disabled={isSubmitting}
                             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(34, 211, 238, 0.3)" }}
                             whileTap={{ scale: 0.95 }}
                             className="submit-btn"
                         >
-                            {isSubmitting ? 'SENDING...' : 'SEND MESSAGE ✉️'}
+                            {isSubmitting ? 'SENDING...' : submitState.type === 'success' ? 'MESSAGE SENT ✓' : 'SEND MESSAGE ✉️'}
                         </motion.button>
                         {submitState.message && (
                             <div
                                 className={`submit-toast ${submitState.type}`}
+                                role="status"
                                 aria-live="polite"
                             >
                                 {submitState.message}
