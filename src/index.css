@@ -25,8 +25,6 @@ body {
     color: var(--text-primary);
     overflow-x: hidden;
     min-height: 100vh;
-    cursor: none;
-    /* Hide default for custom cursor */
 }
 
 /* Custom Cursor */
@@ -45,15 +43,19 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Ensure interactive elements hide cursor too */
-a,
-button,
-[role="button"],
-input,
-select,
-textarea,
-.projimg {
-    cursor: none !important;
+/* Custom cursor only hides the system pointer on fine-pointer devices */
+body.has-custom-cursor,
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor [role="button"],
+body.has-custom-cursor .projimg {
+    cursor: none;
+}
+
+body.has-custom-cursor input,
+body.has-custom-cursor select,
+body.has-custom-cursor textarea {
+    cursor: text;
 }
 
 h1,
@@ -559,6 +561,7 @@ strong {
     border-radius: 24px;
     overflow: hidden;
     position: relative;
+    background-color: #0b1224;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--glass-border);
     transition: all 0.3s ease;
@@ -580,6 +583,55 @@ strong {
 .carousel-item:hover .bento-content {
     transform: translateY(0);
     opacity: 1;
+}
+
+.project-cover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background:
+        radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--cover-accent) 35%, transparent), transparent 45%),
+        linear-gradient(160deg, #0b1224 0%, #020617 70%);
+}
+
+.project-cover-mark {
+    width: 92px;
+    height: 92px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #020617;
+    background: var(--cover-accent);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--cover-accent) 45%, transparent);
+}
+
+.project-cover-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.project-kind {
+    display: inline-block;
+    margin-bottom: 0.7rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    background: rgba(34, 211, 238, 0.1);
 }
 
 .bento-content h3 {
@@ -893,7 +945,7 @@ strong {
     background: linear-gradient(135deg, var(--accent-cyan), var(--accent-indigo));
     color: #000;
     border: none;
-    cursor: none;
+    cursor: pointer;
     border-radius: 50px;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -1088,7 +1140,13 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+    @media (max-width: 600px) {
+    .seen {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .iamchandu {
         font-size: 1.8rem;
         white-space: normal;

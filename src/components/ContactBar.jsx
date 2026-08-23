@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'd088baf7-65e2-47bc-963b-6a9ce1ae90f7';
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 const ContactBar = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -67,6 +67,14 @@ const ContactBar = () => {
             }
         }
 
+        if (!WEB3FORMS_ACCESS_KEY) {
+            setSubmitState({
+                type: 'error',
+                message: 'The contact form is not configured yet. Email me at contact@chandusurisetty.in.',
+            });
+            return;
+        }
+
         if (Object.keys(nextErrors).length > 0) {
             setFieldErrors(nextErrors);
             setSubmitState({
@@ -127,8 +135,9 @@ const ContactBar = () => {
                     <p>If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
 
                     <form className="contact-form" onSubmit={handleSubmit}>
-                        {/* Prefer the Vite env key in deployment, with a fallback to keep submissions working. */}
-                        <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                        {WEB3FORMS_ACCESS_KEY && (
+                            <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                        )}
                         <input type="hidden" name="subject" value="New portfolio contact form submission" />
                         <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
 
@@ -149,7 +158,7 @@ const ContactBar = () => {
                         </div>
                         <motion.button
                             type="submit"
-                            disabled={isSubmitting}
+                            disabled={isSubmitting || !WEB3FORMS_ACCESS_KEY}
                             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(34, 211, 238, 0.3)" }}
                             whileTap={{ scale: 0.95 }}
                             className="submit-btn"
