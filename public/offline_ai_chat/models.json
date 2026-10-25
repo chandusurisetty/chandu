@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-15T00:00:00Z",
+  "updated_at": "2026-10-25T00:00:00Z",
   "models": [
     {
       "id": "qwen2_5_0_5b_instruct_q4_k_m",
@@ -36,19 +36,52 @@
       ]
     },
     {
-      "id": "tinyllama_1_1b_chat_v1_0_q4_k_m",
-      "name": "TinyLlama 1.1B Chat v1.0 (Q4_K_M)",
-      "url": "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
-      "bytes": 701398528,
+      "id": "qwen3_0_6b_q4_k_m",
+      "name": "Qwen3 0.6B (Q4_K_M)",
+      "url": "https://huggingface.co/unsloth/Qwen3-0.6B-GGUF/resolve/main/Qwen3-0.6B-Q4_K_M.gguf",
+      "bytes": 396705472,
       "sha256": "",
       "license": "Apache-2.0",
       "source": "huggingface",
       "recommended": true,
       "tags": [
         "slm",
-        "tiny",
+        "small",
         "very-fast",
-        "chat"
+        "chat",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "gemma_3_1b_it_q4_k_m",
+      "name": "Gemma 3 1B IT (Q4_K_M)",
+      "url": "https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf",
+      "bytes": 806058272,
+      "sha256": "",
+      "license": "Gemma",
+      "source": "huggingface",
+      "recommended": true,
+      "tags": [
+        "slm",
+        "fast",
+        "chat",
+        "quality"
+      ]
+    },
+    {
+      "id": "phi_4_mini_instruct_q4_k_m",
+      "name": "Phi-4 Mini Instruct (Q4_K_M)",
+      "url": "https://huggingface.co/unsloth/Phi-4-mini-instruct-GGUF/resolve/main/Phi-4-mini-instruct-Q4_K_M.gguf",
+      "bytes": 2491874272,
+      "sha256": "",
+      "license": "MIT",
+      "source": "huggingface",
+      "recommended": false,
+      "tags": [
+        "slm",
+        "reasoning",
+        "quality",
+        "high-end-device"
       ]
     },
     {
